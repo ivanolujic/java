@@ -12,6 +12,16 @@ public class E03MathKlasa {
 				break;
 			}
 		}
+		
+		//https://www.baeldung.com/java-generating-random-numbers-in-range
+		
+		// FORMULA ZA RANDOM BROJ
+		//public int getRandomNumber(int min, int max) {
+		    //return (int) ((Math.random() * (max - min)) + min);
+		
+		int sb = (int)((Math.random()*(10-1))+1);
+		System.out.println(sb);
+		
 
 	}
 
