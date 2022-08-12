@@ -21,12 +21,11 @@ public class Zadatak04 {
 		int suma=0;
 		
 		while(broj>0) {
-			//System.out.println(broj%10);
-	    	suma+=broj%10;
-	    	broj/=10;
-	    	//System.out.println(broj);
-	    	
-	    }
+			suma+=broj%10;
+			broj/=10;
+		}
+		
+		
 		System.out.println("--------------");
 		System.out.println(suma);
 		
