@@ -14,7 +14,8 @@ public class Zadatak02 {
 				}
 			}
 			
-			return true;
+			return true;//kod boolean metode, osim return, može
+			// se upisati i true ili false kao povrat
 		}
 
 }
