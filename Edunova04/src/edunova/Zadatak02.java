@@ -1,5 +1,7 @@
 package edunova;
 
+import javax.swing.JOptionPane;
+
 public class Zadatak02 {
 	
 	// Program unosi jedan cijeli broj
@@ -18,8 +20,22 @@ public class Zadatak02 {
 //			10  20  30  40  50  60  70  80  90  100
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		int n = Integer.parseInt(JOptionPane.showInputDialog("Unesi  broj"));
 
-	}
+		if (n < 10 || n > 20) {
+			System.out.println(JOptionPane.showInputDialog("Broj mora  biti  izmedu 10 i 20"));
+
+		}
+
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				System.out.printf("%4d", i * j); // sintaksa ispisa koja određuje broj karaktera u ispisu. U konkretnom slučaju
+				// "%4d" znači da će dužina biti 4 karaktera.			
+			}
+			System.out.println();
+		}
+
+	} 
 
 }
