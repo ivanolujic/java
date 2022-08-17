@@ -33,6 +33,7 @@ public class Pomocno {
 			if(s.trim().isEmpty()) {// trim služi da pobriše eventualne razmake ispred i iza unešenog stringa
 				JOptionPane.showMessageDialog(null, // trim ne dira razmak između dvije riječi
 						"Obvezan unos");
+				continue;// bez continue bi izbacio poruku i vratio prazan string
 			}
 			return s;
 			// return 0; ovaj je samo upisan da nam ne baca grešku
