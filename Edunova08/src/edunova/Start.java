@@ -83,7 +83,7 @@ public class Start {
 		// "requires edunova07"
 		
 		
-		predavac.setIme(Pomocno.ucitajString("Daj ime"));
+		// predavac.setIme(Pomocno.ucitajString("Daj ime"));
 		
 		
 		

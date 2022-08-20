@@ -5,7 +5,7 @@ package edunova.klase;
 //Apstraktna klasa je ona klasa koja ne može imati instancu
 //a kreira se da bi ju druge klase nasljedile
 
-public class Osoba {// klasa Polaznik je povezana
+public abstract class Osoba {// klasa Polaznik je povezana
 	// sa klasom Osoba, a ona je povezana sa klasom "Object", jer je
 	// Osoba objekt (nije nužno navoditi "extends Object", ali se može
 	
