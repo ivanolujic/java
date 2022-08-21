@@ -2,6 +2,8 @@ package edunova;
 
 import javax.swing.JOptionPane;
 
+
+
 // program ispisuje unešeno ime
 
 public class HelloWorld {
@@ -26,6 +28,8 @@ public class HelloWorld {
 		}
 			
 		System.out.println(ime);
+		
+		
 		
 	}
 
