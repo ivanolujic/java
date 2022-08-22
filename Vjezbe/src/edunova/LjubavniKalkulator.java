@@ -25,13 +25,15 @@ public class LjubavniKalkulator {
 		for (int i=0; i<imena.length();i++) {// formiramo niz brojeva slova u imenima
 			brojac = Pomocno.brojSlova(imena, imena.charAt(i));
 			niz[i]=brojac;
-			System.out.print(niz[i]);
 		}
 		
-		//String broj = Arrays.toString(niz); // dobiveni niz brojeva pretvaram u string
-		System.out.println(Pomocno.zbroj(niz));
+		System.out.print(Arrays.toString(niz));
+		//-------------------------------------------------------------------------------------
 		
-			
+		
+		System.out.println(Arrays.toString(Pomocno.zbroj(niz)));
+		
+		//int niz[] = {3,2,1,3,2,1,5,6,7};	
 		
 	}
 		
@@ -86,41 +88,43 @@ public class LjubavniKalkulator {
 		//------------------------------------------------------------------------
 			public static int[] zbroj(int[] niz) {
 				
-				String broj = Arrays.toString(niz);
-				int noviNiz []= new int [broj.length()];
-				int duljina=broj.length()%2;// provjeravam da li je broj članova niza paran ili neparan
+				if(niz.length<=2) {
+					return niz;
+				}
+				int noviNiz []= new int [niz.length];
+				int duljina=niz.length%2;// provjeravam da li je broj članova niza paran ili neparan
 				int p;
 				if(duljina==0) {
-					p=broj.length()/2;
+					p=niz.length/2;
 				} else {
-					p=(broj.length()/2)+1;
+					p=(niz.length/2)+1;
 			}
 				int nizPovrat[] = new int [p];// definiranje duljine novog niza koji će metoda vratiti
 				
-				for (int j=0;j<broj.length();j++) {
-					noviNiz[j]=broj.charAt(j);
+				for (int j=0;j<niz.length;j++) {
+					noviNiz[j]=niz[j];
 				}
 				
-				
+				int brojac1 = 0;
+				int brojac2 = niz.length-1;
 				if (duljina==0) {
-					for (int k=0;k<duljina;k++) {
-						for (int i=0;i<(broj.length()/2);i++) {
-							nizPovrat[k]=noviNiz[i]+noviNiz[broj.length()-i];
+					for (int k=0;k<p;k++) {
+						nizPovrat[k]=niz[brojac1]+niz[brojac2];
+						brojac1++;
+						brojac2--;
 						}
 						
-					}
-				} else {
-					for (int k=0;k<duljina;k++) {
-						for (int i=0;i<(broj.length()/2);i++) {
-							nizPovrat[k]=noviNiz[i]+noviNiz[broj.length()-i];
-							nizPovrat[(p/2)+1]=noviNiz[(broj.length()/2)+1];
+					} else {
+					for (int k=0;k<p-1;k++) {
+						nizPovrat[k]=niz[brojac1]+niz[brojac2];
+						brojac1++;
+						brojac2--;
 						}
+					nizPovrat[brojac1]=niz[p-1];
 						
 					}
-				
-				
-			}
-				return nizPovrat;
+				System.out.print(Arrays.toString(nizPovrat));
+				return zbroj(nizPovrat);
 			
 			
 			
