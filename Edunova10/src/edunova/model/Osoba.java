@@ -1,11 +1,15 @@
 package edunova.model;
 
+import java.math.BigDecimal;
+
 public abstract class Osoba {
 	
 	private int sifra;
 	private String ime;
 	private String prezime;
 	
+	public abstract BigDecimal getUkupno();// ovo smo formirali nakon što smo
+	// napravili konstruktore na predavaču i polazniku sa samo 3 gornja svojstva
 	
 	public Osoba() {
 		super();
