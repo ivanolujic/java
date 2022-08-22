@@ -1,14 +1,21 @@
 package edunova.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Predavac extends Osoba { // nakon što smo naknadno na klasi Osoba dodali novu
+public class Predavac extends Osoba implements Serializable{ // nakon što smo naknadno na klasi Osoba dodali novu
 	// metodu BigDecimal getUkupno, ovdje se pojavljuje greška zbog toga što ta metoda
 	// nije implementirana u ovu metodu koja nasljeđuje osobu
 	// zato treba otići na "žaruljicu" kraj linije i kliknuti na
 	// ADD UNIMPLEMENTED METHOD
 	// nakon toga se na dnu metode pojavi Override za tu metodu
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L; // SERIALIZACIJA (dobije se unosom "implements Serializable" u definiciji metode
+	// i klikom na žaruljicu i odabirom "ADD DEFAULT SERIAL VERSION ID"
+
 	private BigDecimal  kotizacija;// kod obrada iznosa u valutama, dobro je koristiti ovu metodu
 	// zato što double na većem broju podataka ne zaokružuje najbolje decimale, pa može
 	// biti razlika prilikom obrada (npr. može biti razlika u lipama, a što je problem ako
@@ -59,6 +66,8 @@ public class Predavac extends Osoba { // nakon što smo naknadno na klasi Osoba 
 		}
 		return kotizacija.add(rucak);//add radi isto što i zbrajanje
 	}
+
+	
 	
 	
 

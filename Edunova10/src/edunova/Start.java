@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import edunova.model.Osoba;
 import edunova.model.Polaznik;
 import edunova.model.Predavac;
+import edunova.model.Ravnatelj;
 
 public class Start {
 	
@@ -12,7 +13,10 @@ public class Start {
 		// kod formiranja se unese public Star(ctrl+space) i odaberemo 
 		// Start metodu constructor
 		
-		Osoba[] osobe = new Osoba[4];
+		
+		// problem niza je taj što moraš unaprijed
+		// znati dužinu
+		Osoba[] osobe = new Osoba[5];
 		osobe[0] = new Predavac(1,
 				"Ana",
 				"Zimska",
@@ -40,6 +44,12 @@ public class Start {
 				"Vidaković", 
 				new BigDecimal(100), 
 				new BigDecimal(50)
+				);
+		
+		osobe [4]= new Ravnatelj(
+				1, 
+				"Ivan",
+				"Vidaković"
 				);
 		
 		ispisiCijene(osobe);
