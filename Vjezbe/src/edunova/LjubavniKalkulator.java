@@ -54,7 +54,7 @@ public class LjubavniKalkulator {
 		
 		// Metoda za unos stringa bez razmaka i sa malim slovima
 			//------------------------------------------------------------
-			public static String ucitajString(String poruka) {
+			private static String ucitajString(String poruka) {
 				String s;
 				while(true) {
 					s=JOptionPane.showInputDialog(poruka);
@@ -71,7 +71,7 @@ public class LjubavniKalkulator {
 		// Metoda koja broji koliko se pojedino slovo ponavlja u stringu
 		// ----------------------------------------------------------------
 			
-			public static int brojSlova (String ime, Character slovo) {
+			private static int brojSlova (String ime, Character slovo) {
 				int ukupno=0;
 				for (int i=0;i<ime.length();i++) {
 					if(ime.charAt(i)==slovo) {
@@ -86,7 +86,7 @@ public class LjubavniKalkulator {
 			
 		// Metoda koja prima niz brojava i zbraja unutarnje sa vanjskim
 		//------------------------------------------------------------------------
-			public static int[] zbroj(int[] niz) {
+			private static int[] zbroj(int[] niz) {
 				
 				if(niz.length<=2) {
 					return niz;
