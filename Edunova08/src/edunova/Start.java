@@ -34,15 +34,19 @@ public class Start {
 		//slijedeći način
 		System.out.println(p.povrsina());
 		
-		Osoba o = new Osoba();// zovemo prazan konstruktor
+		/*
+		Osoba o = new Osoba(); //prazan konstruktor
 		o.setIme("Pero");
 		o.setPrezime("Perić");
 		
-		o=new Osoba("Maja", "Marić"); // zovemo puni konstruktor
+		o = new Osoba("Maja","Majić"); // puni konstruktor
+		*/
 		
 		Polaznik polaznik = new Polaznik();
 		
+		
 		Predavac predavac = new Predavac();
+		//predavac.set
 		
 		// tekstualni reprezentant objekta
 		

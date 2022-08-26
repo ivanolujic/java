@@ -46,7 +46,7 @@ public class Pomocno {
 			}
 			while(true) {
 				if(i<0) {
-					JOptionPane.showMessageDialog(null, 
+					System.out.println(
 							"Učitani broj mora biti pozitivan");
 					i=ucitajInt(poruka);
 					continue;
@@ -69,7 +69,7 @@ public class Pomocno {
 			if(i>=min && i<=max) {
 				return i;
 			} else {
-				JOptionPane.showMessageDialog(null, 
+				System.out.println( 
 						"Broj mora biti između "+min+" i "+max);
 				i=ucitajInt(poruka);
 			}
@@ -84,9 +84,10 @@ public class Pomocno {
 	public static String ucitajString(String poruka) {
 		String s;
 		while(true) {
-			s=JOptionPane.showInputDialog(poruka);
+			System.out.println(poruka+": ");
+			s=ulaz.nextLine();
 			if(s.trim().isEmpty()) {// trim služi da pobriše eventualne razmake ispred i iza unešenog stringa
-				JOptionPane.showMessageDialog(null, // trim ne dira razmak između dvije riječi
+				System.out.println( // trim ne dira razmak između dvije riječi
 						"Obvezan unos");
 				continue;// bez continue bi izbacio poruku i vratio prazan string
 			}

@@ -24,9 +24,39 @@ public class Start {
 		case 1:
 			smjerovi();
 			break;
+		case 2:
+			grupe();
+			break;
+		case 3:
+			polaznici();
+			break;
+		case 4:
+			predavaci();
+			break;
 		case 5:
 			System.out.println("Doviđenja");		}
 
+	}
+
+	private void predavaci() {
+		System.out.println("Dođe izbornik za predavače");
+		// za sada
+		izbornik();
+		
+	}
+
+	private void polaznici() {
+		System.out.println("Dođe izbornik za polaznike");
+		// za sada
+		izbornik();
+		
+	}
+	
+	private void grupe() {
+		System.out.println("Dođe izbornik za grupe");
+		// za sada
+		izbornik();
+		
 	}
 
 	private void smjerovi() {
