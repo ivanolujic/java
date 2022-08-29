@@ -8,6 +8,18 @@ public abstract class Osoba extends Entitet  {
 	private String oib;
 	private String email;
 	
+	
+	
+	public Osoba() {
+		super();
+	}
+	public Osoba(Integer sifra, String ime, String prezime, String oib, String email) {
+		super(sifra);
+		this.ime = ime;
+		this.prezime = prezime;
+		this.oib = oib;
+		this.email = email;
+	}
 	public String getIme() {
 		return ime;
 	}
